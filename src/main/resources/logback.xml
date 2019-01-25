@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration debug="true">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are  by default assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+        <!--指定日志格式 在此可以指定日志打印到指定的目录中-->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <charset>UTF-8</charset>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+    </root>
+    <logger name="org.mybatis" level="DEBUG"/>
+</configuration>
